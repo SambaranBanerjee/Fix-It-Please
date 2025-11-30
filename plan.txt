@@ -1,0 +1,48 @@
+I will be using MERN stack to build this.
+
+Landing Page.
+    1> Will Contain Heading Text saying "Fix It Please"
+    2> Below it will be a search bar.
+    3> Three Suggestions will be there below search bar. These three will be chosen from a list of Suggestions kept in a list
+    and on each reloading of the page, three would be chosen randomly.
+    4> There will be small yellow button on the top right corner of this page which says "add new entry".
+    5> Clicking on this will open up a new page called AddEntry page, using Link tag with to="/AddEntry".
+
+Registration Page
+    1> Enter your email, password and confirm your password
+    2> The email will be matched to all the emails in the db and if it is already present, will send back a message saying user has an
+    account.
+    3> In case the email is not there, it will place the email in the User table structure of db , then it will hash up the password
+    and keep it in the password column of User table.
+    4> Then after successful Registration, it will redirect the user to the login page using Link tag with to="/login".
+
+Login Page
+    1> The user will enter his email and password.
+    2> This password will be searched for in the db , if found then the password will be hashed and matched to the password in the 
+    db.
+    3> If successful then the user will be redirected to the Landing page, using Link tag with to="/landing".
+
+Add Entry Page
+    1> This page will contain a form asking for "What new problem you found this time ?" , then an input for question/problem, then
+    a selector for entering tags and finally an answer to this problem.
+    2> Then we click the button on the bottom of this form saying "Enter the response",clicking this would lead to visual stack forming
+    below the form with a button with right arrow mark, and the entries in the form will be cleared for another entry.
+    3> The right arrow mark is to send this and all the other queries to the server side.
+    4> There will be a limit of 5 entries at a time.
+
+Problems Page
+    1> This page contain a table with columns like query, tags and answer.
+    2> These problems will be recommended based on the search bar entry.
+    3> The search bar will be moved on to the top of the page.
+    4> On the Top right corner side of the page will be a filter button, which will open a heading bar to select among certain tags.
+    5> On clicking on any particular problem will redirect the user to the View Problem page.
+
+View Problem Page
+    1> This page will contain the particular question/query which we have selected and below it will have the answer for this 
+    query.
+
+App.tsx
+    1> This code file will contain the Routes, BrowserRouter and Route imported from "react-router-dom".
+    2> The individual route paths are marked with path="/" etc.
+    3> These are placed within Routes tag, which is itself placed within BrowserRouter tag.
+
