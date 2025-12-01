@@ -6,7 +6,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body>
+            <body className='min-h-screen w-full'>
                 {children}
             </body>
         </html>

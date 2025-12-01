@@ -69,58 +69,91 @@ export default function RegistrationPage() {
     }
 
     return (
-        <form onSubmit={RegisterUser} className="p-4 max-w-md mx-auto border rounded shadow-md mt-10">
-            <header className="mb-4">
-                <h1 className="text-2xl font-bold">Register</h1>
-            </header>
-            
-            <div className="mb-4">
-                <label htmlFor='email' className="block mb-1 font-medium">Email: </label>
-                <input
-                    className="w-full p-2 border rounded"
-                    type='email'
-                    id='email'
-                    placeholder='Email'
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <div className="mb-4">
-                <label htmlFor='password' className="block mb-1 font-medium">Password: </label>
-                <input
-                    className="w-full p-2 border rounded"
-                    type='password'
-                    id="password"
-                    placeholder='Password'
-                    value={formData.password}
-                    onChange={handleChange}
-                    required />
-            </div>
-            <div className="mb-4">
-                <label htmlFor='confirmPassword' className="block mb-1 font-medium">Confirm Password: </label>
-                <input
-                    className="w-full p-2 border rounded"
-                    type='password'
-                    id="confirmPassword"
-                    placeholder='Confirm Password'
-                    value={formData.confirmPassword}
-                    onChange={handleChange}
-                    required />
-            </div>
-
-            {statusMessage && (
-                <div className={`p-3 mb-4 rounded ${statusMessage.type === 'error' ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
-                    {statusMessage.text}
-                </div>
-            )}
-
-            <button 
-                type='submit' 
-                className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition-colors"
+        <div className="min-h-screen w-full flex items-center justify-center bg-[#1e2729] p-4">
+            <form 
+                onSubmit={RegisterUser} 
+                className="w-full max-w-md bg-[#000000] rounded-xl shadow-2xl overflow-hidden p-8 space-y-6"
             >
-                Submit
-            </button>
-        </form>
+                <header className="text-center">
+                    <h1 className="text-3xl font-extrabold font-serif text-[#F7BD03]">Create Account</h1>
+                    <p className="text-sm text-gray-500 mt-2">Sign up to get started</p>
+                </header>
+                
+                <div className="space-y-4">
+                    <div>
+                        <label htmlFor='email' className="block text-sm font-medium text-[#F7BD03] mb-1">
+                            Email Address
+                        </label>
+                        <input
+                            className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                            type='email'
+                            id='email'
+                            placeholder='name@example.com'
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor='password' className="block text-sm font-medium text-[#F7BD03] mb-1">
+                            Password
+                        </label>
+                        <input
+                            className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                            type='password'
+                            id="password"
+                            placeholder='••••••••'
+                            value={formData.password}
+                            onChange={handleChange}
+                            required 
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor='confirmPassword' className="block text-sm font-medium text-[#F7BD03] mb-1">
+                            Confirm Password
+                        </label>
+                        <input
+                            className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                            type='password'
+                            id="confirmPassword"
+                            placeholder='••••••••'
+                            value={formData.confirmPassword}
+                            onChange={handleChange}
+                            required 
+                        />
+                    </div>
+                </div>
+
+                {statusMessage && (
+                    <div className={`p-4 rounded-lg text-sm font-medium ${
+                        statusMessage.type === 'error' 
+                            ? 'bg-red-50 text-red-700 border border-red-200' 
+                            : 'bg-green-50 text-green-700 border border-green-200'
+                    }`}>
+                        {statusMessage.text}
+                    </div>
+                )}
+
+                <button 
+                    type='submit' 
+                    className="w-full bg-[#1e2729] hover:bg-yellow-700 text-[#F7BD03] hover:text-[#ffffff] font-bold py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 ease-in-out transform 
+                    hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                >
+                    Sign Up
+                </button>
+
+                <div className="text-center text-sm text-gray-500">
+                    Already have an account?{' '}
+                    <span 
+                        onClick={() => router.push('/login')} 
+                        className="text-[#F7BD03] hover:text-blue-500 font-semibold cursor-pointer hover:underline"
+                    >
+                        Log in
+                    </span>
+                </div>
+            </form>
+        </div>
   )
 }
