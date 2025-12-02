@@ -11,7 +11,7 @@ export default function index() {
                             hover:bg-[#1e2729] hover:text-[#F7BD03]
                             hover:shadow-lg transition-all duration-200 ease-in-out transform 
                             hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-yellow-300">
-                <Link href="/login" className="text-center text-2xl font-medium">
+                <Link href="/pages/login" className="text-center text-2xl font-medium">
                    Login
                 </Link>
             </button>
@@ -19,7 +19,7 @@ export default function index() {
                             hover:bg-[#1e2729] hover:text-[#F7BD03]
                             hover:shadow-lg transition-all duration-200 ease-in-out transform 
                             hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-yellow-300">
-                <Link href="/registration" className="text-center text-2xl font-medium">
+                <Link href="/pages/registration" className="text-center text-2xl font-medium">
                     Register
                 </Link>
             </button>
