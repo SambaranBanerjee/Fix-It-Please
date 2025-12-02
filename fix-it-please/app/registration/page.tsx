@@ -69,7 +69,10 @@ export default function RegistrationPage() {
     }
 
     return (
-        <div className="min-h-screen w-full flex items-center justify-center bg-[#1e2729] p-4">
+        <div 
+        className="min-h-screen w-full flex items-center justify-center bg-[#1e2729] p-4"
+        style={{backgroundImage: "url('/opoy7.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}}
+        >
             <form 
                 onSubmit={RegisterUser} 
                 className="w-full max-w-md bg-[#000000] rounded-xl shadow-2xl overflow-hidden p-8 space-y-6"
