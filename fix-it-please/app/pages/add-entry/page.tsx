@@ -96,6 +96,10 @@ export default function AddEntryPage() {
     opt.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const goToLanding = () => {
+    window.location.href = '/pages/landing';
+  }
+
   return (
     <div 
     className="min-h-screen w-full flex items-center justify-center bg-[#1e2729] p-4"
@@ -272,6 +276,7 @@ export default function AddEntryPage() {
                 <button 
                     type="button"
                     className="px-6 py-3 text-gray-400 hover:text-white font-medium transition-colors"
+                    onClick={goToLanding}
                 >
                     Cancel
                 </button>
