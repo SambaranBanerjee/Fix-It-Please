@@ -7,7 +7,6 @@ const entrySchema = new mongoose.Schema(
             required: [true, "Please provide a title for the problem"],
             trim: true,
         },
-        // Mapped to the multi-select dropdown in form
         type: {
             type: [String], 
             required: [true, "Please select at least one language or bug type"],
@@ -23,7 +22,6 @@ const entrySchema = new mongoose.Schema(
     }
 );
 
-// This check is essential in Next.js to prevent "OverwriteModelError" during hot reloads
 const Entry = mongoose.models.Entry || mongoose.model("Entry", entrySchema);
 
 export default Entry;
