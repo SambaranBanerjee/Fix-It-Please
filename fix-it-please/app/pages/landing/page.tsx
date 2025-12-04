@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#1e2729] flex flex-col text-white">
+    <div className="min-h-screen bg-[#1e2729] flex flex-col text-white vertical-scroll">
       {/* Header Section */}
       <header className="w-full p-6 flex justify-end items-center border-b border-gray-800 bg-[#000000]/30 backdrop-blur-sm sticky top-0 z-50">
         <div>
@@ -36,7 +36,9 @@ export default function LandingPage() {
             <div className="absolute -inset-1 bg-gradient-to-r from-[#F7BD03] to-[#b38802] rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             <input 
                 type='text' 
-                placeholder='Enter your query here...' 
+                placeholder='Enter your query here...'
+                autoComplete='off'
+                spellCheck="false" 
                 className="relative w-full p-5 pl-8 rounded-xl bg-[#000000] border-2 border-[#333] text-white text-xl placeholder-gray-500
                          focus:outline-none focus:border-[#F7BD03] focus:ring-1 focus:ring-[#F7BD03]
                          transition-all duration-300 shadow-2xl"
@@ -47,9 +49,9 @@ export default function LandingPage() {
         </div>
       </main>
 
-      <footer className="w-full p-6 text-center border-gray-800 bg-[#000000]/30 backdrop-blur-sm text-sm border-t">
+      {/*<footer className="w-full p-6 text-center border-gray-800 bg-[#000000]/30 backdrop-blur-sm text-sm border-t">
         &copy; {new Date().getFullYear()} Fix It Please. All systems operational.
-      </footer>
+      </footer>*/}
     </div>
   )
 }

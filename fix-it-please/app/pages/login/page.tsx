@@ -21,7 +21,6 @@ export default function LoginPage() {
         setIsLoading(true);
 
         try {
-            // Assuming your backend route is /api/login
             const response = await fetch('/api/login', {
                 method: 'POST',
                 headers: {

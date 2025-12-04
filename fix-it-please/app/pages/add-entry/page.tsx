@@ -69,7 +69,7 @@ export default function AddEntryPage() {
     e.preventDefault();
     console.log("Submitting Entry:", formData);
     try {
-        const response = await fetch('/api/addEntry', {
+        const response = await fetch('/api/entry', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
