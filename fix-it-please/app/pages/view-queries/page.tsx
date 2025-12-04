@@ -41,7 +41,7 @@ export default function ViewQueriesPage() {
     }, []);
 
     const handleQueryClick = (id: string) => {
-        router.push(`/view-queries/${id}`);
+        router.push(`/pages/view-queries/${id}`);
     }
 
     return (
