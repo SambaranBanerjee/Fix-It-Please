@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation';
 
 interface Query {
     _id: string;
@@ -10,6 +11,7 @@ interface Query {
 }
 
 export default function ViewQueriesPage() {
+    const router = useRouter();
     const [queries, setQueries] = useState<Query[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -37,6 +39,10 @@ export default function ViewQueriesPage() {
 
         getQueries();
     }, []);
+
+    const handleQueryClick = (id: string) => {
+        router.push(`/view-queries/${id}`);
+    }
 
     return (
         <div className="min-h-screen bg-[#1e2729] p-8 text-white">
@@ -79,7 +85,10 @@ export default function ViewQueriesPage() {
                             <tbody className="divide-y divide-gray-800">
                                 {queries.length > 0 ? (
                                     queries.map((query) => (
-                                        <tr key={query._id} className="hover:bg-[#1e2729]/50 transition-colors">
+                                        <tr 
+                                            key={query._id}
+                                            onClick={() => handleQueryClick(query._id)} 
+                                            className="hover:bg-[#1e2729]/50 transition-colors">
                                             <td className="p-4 align-top font-medium text-white max-w-xs">
                                                 {query.title}
                                             </td>
@@ -94,8 +103,10 @@ export default function ViewQueriesPage() {
                                                 </div>
                                             </td>
 
-                                            <td className="p-4 align-top text-gray-400 font-mono text-sm max-w-md whitespace-pre-wrap">
-                                                {query.solution}
+                                            <td className="p-4 align-top text-gray-400 font-mono text-sm">
+                                                <div className="truncate max-w-md">
+                                                    {query.solution}
+                                                </div>
                                             </td>
                                         </tr>
                                     ))
