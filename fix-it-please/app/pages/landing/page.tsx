@@ -32,7 +32,6 @@ export default function LandingPage() {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   
-  // 300ms delay is standard for UX
   const debouncedQuery = useDebounce(query, 300);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -83,15 +82,25 @@ export default function LandingPage() {
     <div className="min-h-screen bg-[#1e2729] flex flex-col text-white vertical-scroll">
       
       {/* Header Section */}
-      <header className="w-full p-6 flex justify-end items-center border-b border-gray-800 bg-[#000000]/30 backdrop-blur-sm sticky top-0 z-50">
+      <header className="w-full p-6 flex justify-end items-center gap-5 border-b border-gray-800 bg-[#000000]/30 backdrop-blur-sm sticky top-0 z-50">
         <div>
-            <Link href='/add-entry' className="bg-[#F7BD03] text-[#1e2729] font-bold py-2 px-6 rounded-lg shadow-md
+            <Link href='/pages/add-entry' className="bg-[#F7BD03] text-[#1e2729] font-bold py-2 px-6 rounded-lg shadow-md
                         hover:bg-[#ffffff] hover:text-[#1e2729] 
                         hover:shadow-[0_0_15px_rgba(247,189,3,0.4)] transition-all duration-300 ease-in-out transform 
                         hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-yellow-200
                         text-lg font-medium"      
             >
                 Add new entry
+            </Link>
+        </div>
+        <div>
+            <Link href='/pages/view-queries' className="bg-[#F7BD03] text-[#1e2729] font-bold py-2 px-6 rounded-lg shadow-md
+                        hover:bg-[#ffffff] hover:text-[#1e2729] 
+                        hover:shadow-[0_0_15px_rgba(247,189,3,0.4)] transition-all duration-300 ease-in-out transform 
+                        hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-yellow-200
+                        text-lg font-medium"      
+            >
+                View All Entries
             </Link>
         </div>
       </header>
