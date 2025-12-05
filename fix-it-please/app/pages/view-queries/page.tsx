@@ -48,6 +48,12 @@ export default function ViewQueriesPage() {
         <div className="min-h-screen bg-[#1e2729] p-8 text-white">
             
             <header className="mb-8 flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-700 pb-6">
+                <button 
+                        onClick={() => router.push('/pages/landing')}
+                        className="p-2 rounded-full bg-[#000000] border border-gray-700 text-[#F7BD03] hover:bg-[#F7BD03] hover:text-black transition-colors"
+                    >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </button>
                 <div>
                     <h1 className="text-3xl font-extrabold font-serif text-[#F7BD03]">
                         Problem Database
