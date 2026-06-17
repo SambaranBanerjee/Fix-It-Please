@@ -204,21 +204,21 @@ export default function ViewQueriesPage() {
                                             key={query._id}
                                             onClick={() => handleQueryClick(query._id)} 
                                             className="hover:bg-[#1e2729]/50 transition-colors">
-                                            <td className="p-4 align-top font-medium text-white max-w-xs">
+                                            <td className="p-4 align-top font-medium text-white max-w-xs hover: cursor-pointer">
                                                 {query.title}
                                             </td>
 
                                             <td className="p-4 align-top">
                                                 <div className="flex flex-wrap gap-2">
                                                     {query.type.map((tag, index) => (
-                                                        <span key={index} className="px-2 py-1 rounded text-xs font-bold bg-[#F7BD03]/20 text-[#F7BD03] border border-[#F7BD03]/30">
+                                                        <span key={index} className="px-2 py-1 rounded text-xs font-bold bg-[#F7BD03]/20 text-[#F7BD03] border border-[#F7BD03]/30 hover: cursor-pointer">
                                                             {tag}
                                                         </span>
                                                     ))}
                                                 </div>
                                             </td>
 
-                                            <td className="p-4 align-top text-gray-400 font-mono text-sm">
+                                            <td className="p-4 align-top text-gray-400 font-mono text-sm hover: cursor-pointer">
                                                 <div className="truncate max-w-md">
                                                     {query.solution}
                                                 </div>
