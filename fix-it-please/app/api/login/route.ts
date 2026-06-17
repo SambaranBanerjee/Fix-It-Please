@@ -20,7 +20,7 @@ export async function POST(request: Request) {
 
         if (!user) {
             return NextResponse.json(
-                {message: "User nt found"},
+                {message: "User not found"},
                 {status: 404}
             )
         }
