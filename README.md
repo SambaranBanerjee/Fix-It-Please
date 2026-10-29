@@ -120,31 +120,15 @@ The application is designed for:
 
 ## 🖼️ Screenshots
 
-Add your screenshots inside a `screenshots` directory and update the paths below.
-
 ### Landing Page
 
-```md
-![Landing Page](./screenshots/landing-page.png)
-```
 
 ### Problems Database
 
-```md
-![Problems Database](./screenshots/problems-database.png)
-```
 
 ### Solution Details
 
-```md
-![Solution Details](./screenshots/solution-details.png)
-```
-
 ### Community Discussion
-
-```md
-![Community Discussion](./screenshots/community-discussion.png)
-```
 
 ---
 
